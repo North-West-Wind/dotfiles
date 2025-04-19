@@ -1,0 +1,99 @@
+
+[
+	// Bar 1: Main screen bottom
+	{
+		"layer": "bottom",
+		"output": [
+			"HDMI-A-2"
+		],
+		"position": "bottom",
+		"spacing": 8,
+		"modules-left": [
+			"custom/launcher",
+			"custom/power",
+			"wlr/taskbar"
+		],
+		"modules-center": [
+			"hyprland/workspaces"
+		],
+		"modules-right": [
+			"tray",
+			"clock"
+		],
+
+		"include": ["~/.config/waybar/common-modules.json"],
+
+		// Left modules
+		"custom/launcher": {
+			"format": ""
+		},
+		"custom/power": {
+			"format": "",
+			"on-click": "~/.config/waybar/scripts/power-menu/powermenu.sh"
+		},
+		"wlr/taskbar": {
+	    "format": "{icon}",
+	    "icon-size": 28,
+			"on-click": "activate"
+		},
+
+		// Center modules
+		"hyprland/workspaces": {
+			"format": "{name}",
+			"on-click": "activate"
+		},
+
+
+		// Right modules
+		"tray": {
+			"icon-size": 16,
+			"spacing": 10
+		},
+		"clock": {
+			"format": "{:%H:%M:%S}",
+			"format-alt": "{:%Y/%m/%d}",
+			"interval": 1
+		}
+	},
+	// Bar 2: 2nd screen left
+	{
+		"layer": "bottom",
+		"output": [
+			"HDMI-A-1"
+		],
+		"position": "left",
+		"spacing": 8,
+		"modules-left": [
+			"clock",
+			"cpu",
+			"memory"
+		],
+		"modules-center": [
+			"hyprland/workspaces"
+		],
+		"include": ["~/.config/waybar/common-modules.json"],
+
+		"clock": {
+			"format": "{0:%H}\n{0:%M}\n{0:%S}",
+			"interval": 1
+		},
+		"cpu": {
+			"format": "{icon0}{icon1}{icon2}{icon3}{icon4}\n{icon5}{icon6}{icon7}{icon8}{icon9}\n{icon10}{icon11}{icon12}{icon13}{icon14}\n{icon15}{icon16}{icon17}{icon18}{icon19}",
+			"format-icons": [
+				"<span color='#6eff6c'>▁</span>",
+				"<span color='#87ff6c'>▂</span>",
+				"<span color='#acff6c'>▃</span>",
+				"<span color='#c9ff6c'>▄</span>",
+				"<span color='#faff6c'>▅</span>",
+				"<span color='#ffe26c'>▆</span>",
+				"<span color='#ffc26c'>▇</span>",
+				"<span color='#ff6c6c'>█</span>"
+ 			],
+			"interval": 1
+		},
+		"memory": {
+			"format": "{percentage}%",
+			"interval": 1
+		}
+	}
+]

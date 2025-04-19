@@ -1,0 +1,108 @@
+window#waybar {
+	background-color: transparent;
+	margin: 8;
+	font-size: 16px;
+}
+
+window#waybar.bottom .module {
+	padding: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 20px;
+}
+
+window#waybar.bottom #custom-launcher {
+	margin-left: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: linear-gradient(0.3turn, #e1b546, #ded944);
+}
+
+window#waybar.bottom #custom-power {
+	padding-left: 14.5px;
+	padding-right: 14.5px;
+	background: linear-gradient(0.3turn, #e14646, #dea844);
+}
+
+window#waybar.bottom #taskbar {
+	padding: 0;
+	background: linear-gradient(0.3turn, #404040, #686868);
+}
+
+window#waybar.bottom #workspaces {
+	padding: 0;
+}
+
+window#waybar.bottom #workspaces button {
+	margin-left: 4px;
+	margin-right: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background: linear-gradient(0.3turn, #e146b2, #de444c);
+	border-radius: 20px;
+}
+
+window#waybar.bottom #workspaces button.active {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+window#waybar.bottom #clock {
+	margin-right: 12px;
+	background: linear-gradient(0.3turn, #46e199, #44cede);
+}
+
+window#waybar.bottom #tray {
+	background: linear-gradient(0.3turn, #825ad1, #d15fb3);
+}
+
+/* Left Bar */
+
+window#waybar.left .module {
+	padding: 8px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-left: 20px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border-radius: 20px;
+}
+
+window#waybar.left #clock {
+	margin-top: 20px;
+	padding: 16px;
+	background: linear-gradient(0.1turn, #46e199, #44cede);
+	font-size: 32px;
+}
+
+window#waybar.left #cpu {
+	background: linear-gradient(0.1turn, #3aa1ba, #3d74c8);
+	font-size: 12px;
+	border-radius: 16px;
+}
+
+window#waybar.left #memory {
+	background: linear-gradient(0.1turn, #dc9b45, #e5d246);
+	border-radius: 16px;
+}
+
+window#waybar.left #workspaces {
+	padding: 0;
+}
+
+window#waybar.left #workspaces button {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	background: linear-gradient(0.1turn, #e146b2, #de444c);
+	border-radius: 20px;
+}
+
+window#waybar.left #workspaces button.active {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
