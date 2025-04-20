@@ -27,7 +27,8 @@
 
 		// Left modules
 		"custom/launcher": {
-			"format": ""
+			"format": "",
+			"on-click": "krunner"
 		},
 		"custom/power": {
 			"format": "",
