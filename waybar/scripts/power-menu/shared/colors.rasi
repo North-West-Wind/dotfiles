@@ -18,10 +18,11 @@
 /*@import "./colors/catppuccin.rasi"*/
 
 * {
-    background:     linear-gradient(#e28a26, #e2d226);
-    background-alt: #282839FF;
+    background:     linear-gradient(#60c8d4, #5ccca5);
+    background-alt: linear-gradient(#7e7e7e, #5e5e5e);
+    background-msg: linear-gradient(#419cd5, #4271d5);
     foreground:     #D9E0EEFF;
-    selected:       linear-gradient(#6fe9f7, #6ff7c8);
-    active:         #ABE9B3FF;
+    selected:       linear-gradient(#136a93, #119332);
+    active:         linear-gradient(#d0d02a, #d4902a);
     urgent: #ff3d71;
 }

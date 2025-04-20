@@ -34,7 +34,8 @@
 		"wlr/taskbar": {
 	    "format": "{icon}",
 	    "icon-size": 28,
-			"on-click": "activate"
+			"on-click": "activate",
+			"all-outputs": true
 		},
 
 		// Center modules

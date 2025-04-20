@@ -18,13 +18,13 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
-shutdown=' Shutdown'
+shutdown=' Poweroff'
 reboot=' Reboot'
 lock=' Lock'
-suspend=' Suspend'
-logout=' Logout'
-yes=' Yes'
-no=' No'
+suspend=' Suspend'
+logout='  Logout'
+yes=' Yes'
+no=' No'
 
 # Rofi CMD
 rofi_cmd() {
@@ -66,8 +66,8 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
+			#mpc -q pause
+			#amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
       hyprctl dispatch exit 1
@@ -87,11 +87,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
+		loginctl lock-session
         ;;
     $suspend)
 		run_cmd --suspend

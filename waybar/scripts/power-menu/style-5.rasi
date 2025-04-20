@@ -35,7 +35,8 @@ window {
     border-radius:               4px;
     border-color:                @selected;
     cursor:                      "default";
-    background-image:            @background;
+    background-image:                  @background;
+		
 }
 
 /*****----- Main Box -----*****/
@@ -62,7 +63,7 @@ inputbar {
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", dummy, "prompt"];
+    children:                    [ dummy, "prompt"];
 }
 
 dummy {
@@ -82,8 +83,8 @@ prompt {
     enabled:                     true;
     padding:                     10px;
     border-radius:               4px;
-    background-color:            @active;
-    text-color:                  @background;
+    background-image:            @active;
+    text-color:                  @foreground;
 }
 
 /*****----- Message -----*****/
@@ -94,15 +95,14 @@ message {
     border:                      0px solid;
     border-radius:               4px;
     border-color:                @selected;
-    background-color:            @background-alt;
+    background-image:            @background-msg;
     text-color:                  @foreground;
 }
 textbox {
-    background-color:            inherit;
+    background-color:            transparent;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @foreground;
     blink:                       true;
     markup:                      true;
 }
@@ -148,7 +148,7 @@ element {
     border:                      0px solid;
     border-radius:               4px;
     border-color:                @selected;
-    background-color:            @background-alt;
+    background-image:            @background-alt;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
