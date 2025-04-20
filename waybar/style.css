@@ -55,6 +55,12 @@ window#waybar.bottom #clock {
 	background: linear-gradient(0.3turn, #46e199, #44cede);
 }
 
+window#waybar.bottom #custom-audio {
+	padding-left: 14.5px;
+	padding-right: 14.5px;
+	background: linear-gradient(0.3turn, #2b73d7, #44b5de);
+}
+
 window#waybar.bottom #tray {
 	background: linear-gradient(0.3turn, #825ad1, #d15fb3);
 }

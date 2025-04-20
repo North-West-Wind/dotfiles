@@ -8,7 +8,6 @@ trap 'finish=1' SIGQUIT
 trap 'finish=1' SIGTSTP
 
 pactllog=$(mktemp)
-> $pactllog
 script -q -c "pactl subscribe" > $pactllog &
 pactlpid=$!
 
@@ -22,7 +21,6 @@ do
 		echo "{\"text\":\"$source\",\"class\":\"mute\"}"
 	fi
 	tail -f -n0 $pactllog | grep -qe "change"
-	> $pactllog
 done
 
 rm $pactllog

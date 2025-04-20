@@ -18,6 +18,7 @@
 		],
 		"modules-right": [
 			"tray",
+			"custom/audio",
 			"clock"
 		],
 
@@ -49,6 +50,10 @@
 		"tray": {
 			"icon-size": 16,
 			"spacing": 10
+		},
+		"custom/audio": {
+			"format": "",
+			"on-click": "killall pavucontrol || pavucontrol"
 		},
 		"clock": {
 			"format": "{:%H:%M:%S}",
