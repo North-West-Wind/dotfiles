@@ -14,7 +14,8 @@
 			"wlr/taskbar"
 		],
 		"modules-center": [
-			"hyprland/workspaces"
+			"hyprland/workspaces",
+			"hyprland/window"
 		],
 		"modules-right": [
 			"tray",
@@ -44,7 +45,15 @@
 			"format": "{name}",
 			"on-click": "activate"
 		},
-
+		"hyprland/window": {
+			"format": "{title}",
+			"rewrite": {
+				"(.*) — .*$": "$1",
+				"(.*) - .*$": "$1"
+			},
+			"icon": true,
+			"icon-size": 24
+		},
 
 		// Right modules
 		"tray": {

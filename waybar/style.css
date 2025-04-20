@@ -16,14 +16,14 @@ window#waybar.bottom .module {
 
 window#waybar.bottom #custom-launcher {
 	margin-left: 12px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 11px;
+	padding-right: 11px;
 	background: linear-gradient(0.3turn, #e1b546, #ded944);
 }
 
 window#waybar.bottom #custom-power {
-	padding-left: 14.5px;
-	padding-right: 14.5px;
+	padding-left: 15px;
+	padding-right: 15px;
 	background: linear-gradient(0.3turn, #e14646, #dea844);
 }
 
@@ -50,14 +50,24 @@ window#waybar.bottom #workspaces button.active {
 	padding-right: 20px;
 }
 
+window#waybar.bottom #window {
+	margin-left: 0;
+	background: linear-gradient(0.3turn, #e2772f, #d1b121);
+}
+
+window#waybar.bottom.empty #window {
+	background: transparent;
+	padding: 0;
+}
+
 window#waybar.bottom #clock {
 	margin-right: 12px;
 	background: linear-gradient(0.3turn, #46e199, #44cede);
 }
 
 window#waybar.bottom #custom-audio {
-	padding-left: 14.5px;
-	padding-right: 14.5px;
+	padding-left: 15px;
+	padding-right: 15px;
 	background: linear-gradient(0.3turn, #2b73d7, #44b5de);
 }
 
