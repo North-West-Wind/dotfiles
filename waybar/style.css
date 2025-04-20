@@ -28,7 +28,7 @@ window#waybar.bottom #custom-power {
 }
 
 window#waybar.bottom #taskbar {
-	padding: 0;
+	padding: 0 6px;
 	background: linear-gradient(0.3turn, #404040, #686868);
 }
 
@@ -105,4 +105,50 @@ window#waybar.left #workspaces button {
 window#waybar.left #workspaces button.active {
 	padding-top: 16px;
 	padding-bottom: 16px;
+}
+
+window#waybar.left #custom-pedalphile {
+	font-size: 10px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background: linear-gradient(0.1turn, #bdbdbd, #979797);
+	border-radius: 4px;
+}
+
+window#waybar.left #custom-mute-game, window#waybar.left #custom-mute-vc {
+	font-size: 12px;
+	border-radius: 8px;
+	padding: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+window#waybar.left #custom-mute-game {
+	margin-bottom: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+window#waybar.left #custom-mute-vc {
+	margin-top: 0;
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+window#waybar.left #custom-mute-game.unmute {
+	background: linear-gradient(0.1turn, #0bcf0b, #09b498);
+}
+
+window#waybar.left #custom-mute-game.mute {
+	background: linear-gradient(0.1turn, #ed0b0b, #dd6b0e);
+}
+
+window#waybar.left #custom-mute-vc.unmute {
+	background: linear-gradient(0.1turn, #0bcf0b, #09b498);
+}
+
+window#waybar.left #custom-mute-vc.mute {
+	background: linear-gradient(0.1turn, #ed0b0b, #dd6b0e);
 }

@@ -7,7 +7,7 @@
 			"HDMI-A-2"
 		],
 		"position": "bottom",
-		"spacing": 8,
+		"spacing": 4,
 		"modules-left": [
 			"custom/launcher",
 			"custom/power",
@@ -63,7 +63,7 @@
 			"HDMI-A-1"
 		],
 		"position": "left",
-		"spacing": 8,
+		"spacing": 4,
 		"modules-left": [
 			"clock",
 			"cpu",
@@ -71,6 +71,11 @@
 		],
 		"modules-center": [
 			"hyprland/workspaces"
+		],
+		"modules-right": [
+			"custom/pedalphile",
+			"custom/mute-game",
+			"custom/mute-vc"
 		],
 		"include": ["~/.config/waybar/common-modules.json"],
 
@@ -95,6 +100,21 @@
 		"memory": {
 			"format": "{percentage}%",
 			"interval": 1
+		},
+
+		"custom/pedalphile": {
+			"exec": "pedalphile",
+			"format": "{}"
+		},
+		"custom/mute-game": {
+			"exec": "~/.config/waybar/scripts/source-watcher.sh in_game",
+			"format": "{}",
+			"return-type": "json"
+		},
+		"custom/mute-vc": {
+			"exec": "~/.config/waybar/scripts/source-watcher.sh in_vc",
+			"format": "{}",
+			"return-type": "json"
 		}
 	}
 ]
