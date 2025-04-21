@@ -119,7 +119,8 @@
 
 		"custom/pedalphile": {
 			"exec": "pedalphile",
-			"format": "{}"
+			"format": "{}",
+			"escape": true
 		},
 		"custom/mute-game": {
 			"exec": "~/.config/waybar/scripts/source-watcher.sh in_game",

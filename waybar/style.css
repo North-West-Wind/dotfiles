@@ -1,3 +1,7 @@
+/** {
+	font-family: Splatoon2;
+}*/
+
 window#waybar {
 	background-color: transparent;
 	margin: 8;
@@ -43,6 +47,7 @@ window#waybar.bottom #workspaces button {
 	padding-right: 12px;
 	background: linear-gradient(0.3turn, #e146b2, #de444c);
 	border-radius: 20px;
+	transition: all .25s ease;
 }
 
 window#waybar.bottom #workspaces button.active {
@@ -50,9 +55,14 @@ window#waybar.bottom #workspaces button.active {
 	padding-right: 20px;
 }
 
+window#waybar.bottom #workspaces button.hidden {
+	padding: 0;
+}
+
 window#waybar.bottom #window {
 	margin-left: 0;
 	background: linear-gradient(0.3turn, #e2772f, #d1b121);
+	transition: all .25s ease;
 }
 
 window#waybar.bottom.empty #window {
@@ -125,32 +135,35 @@ window#waybar.left #workspaces button.active {
 
 window#waybar.left #custom-pedalphile {
 	font-size: 10px;
-	padding: 4px;
+	padding: 6px;
 	padding-left: 8px;
 	padding-right: 8px;
 	background: linear-gradient(0.1turn, #bdbdbd, #979797);
-	border-radius: 4px;
+	border-radius: 8px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	margin-bottom: 0;
 }
 
 window#waybar.left #custom-mute-game, window#waybar.left #custom-mute-vc {
 	font-size: 12px;
-	border-radius: 8px;
 	padding: 4px;
 	padding-left: 12px;
 	padding-right: 12px;
+	border-radius: 8px;
 }
 
 window#waybar.left #custom-mute-game {
+	margin-top: 0;
 	margin-bottom: 0;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+	border-radius: 4px;
 }
 
 window#waybar.left #custom-mute-vc {
 	margin-top: 0;
 	margin-bottom: 20px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 }
 
 window#waybar.left #custom-mute-game.unmute {
