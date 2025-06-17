@@ -1,7 +1,7 @@
 # Maintainer: NorthWestWind <wsyn148@gmail.com>
 pkgname=hyprsquid-meta
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Meta-package for HyprSquid dependencies"
 arch=("any")
 url="https://github.com/North-West-Wind/dotfiles"
@@ -27,6 +27,9 @@ depends=(
 	# Apps
 	"dolphin"
 	"konsole"
+	# Take-a-break
+	"mpv"
+	"playerctl"
 )
 optdepends=(
 	# Some tray stuff
