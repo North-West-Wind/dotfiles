@@ -13,6 +13,7 @@ interval=3600 # 3600s = 1 hour
 next=$(($(date +%s) + $interval))
 running=1
 paused=0
+deferred=0
 
 echo "Next reminder: $(date -d@$next)"
 
@@ -33,8 +34,13 @@ while [ $running -eq 1 ]; do
 				;;
 			"resume")
 				paused=0
+				deferred=0
 				echo "Resumed"
 				echo "Next reminder: $(date -d@$next)"
+				;;
+			"defer")
+				deferred=1
+				echo "Deferred"
 				;;
 		esac
 		sleep 1
@@ -46,7 +52,7 @@ while [ $running -eq 1 ]; do
 	fi
 
 	# Play video when time's up
-	if [ $(date +%s) -gt $next ]; then
+	if [ $(date +%s) -gt $next ] && [ $deferred -eq 0 ]; then
 		playerctl pause
 		mpv --background=color \
 				--background-color="#3f000000" \

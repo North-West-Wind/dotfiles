@@ -20,6 +20,7 @@
 		"modules-right": [
 			"tray",
 			"custom/audio",
+			"custom/break",
 			"clock"
 		],
 
@@ -28,10 +29,12 @@
 		// Left modules
 		"custom/launcher": {
 			"format": "",
-			"on-click": "krunner"
+			"tooltip-format": "Launch",
+			"on-click": "walker"
 		},
 		"custom/power": {
 			"format": "",
+			"tooltip-format": "Power",
 			"on-click": "~/.config/waybar/scripts/power-menu/powermenu.sh"
 		},
 		"wlr/taskbar": {
@@ -63,11 +66,23 @@
 		},
 		"custom/audio": {
 			"format": "",
+			"tooltip-format": "Audio",
 			"on-click": "killall pavucontrol || pavucontrol"
+		},
+		"custom/break": {
+			"return-type": "json",
+			"format": "",
+			"tooltip-format": "Take A Break!",
+			"exec": "~/.config/hypr/break/ipc.sh",
+			"exec-on-event": true,
+			"interval": "once",
+			"on-click": "~/.config/hypr/break/ipc.sh toggle",
+			"on-click-right": "~/.config/hypr/break/ipc.sh defer"
 		},
 		"clock": {
 			"format": "{:%H:%M:%S}",
 			"format-alt": "{:%Y/%m/%d}",
+			"tooltip": false,
 			"interval": 1
 		}
 	},
@@ -96,6 +111,7 @@
 
 		"clock": {
 			"format": "{0:%H}\n{0:%M}\n{0:%S}",
+			"tooltip": false,
 			"interval": 1
 		},
 		"cpu": {
@@ -120,16 +136,19 @@
 		"custom/pedalphile": {
 			"exec": "pedalphile",
 			"format": "{}",
+			"tooltip": false,
 			"escape": true
 		},
 		"custom/mute-game": {
 			"exec": "~/.config/waybar/scripts/source-watcher.sh in_game",
 			"format": "{}",
+			"tooltip": false,
 			"return-type": "json"
 		},
 		"custom/mute-vc": {
 			"exec": "~/.config/waybar/scripts/source-watcher.sh in_vc",
 			"format": "{}",
+			"tooltip": false,
 			"return-type": "json"
 		}
 	}
