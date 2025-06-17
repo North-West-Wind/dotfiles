@@ -1,0 +1,4 @@
+# makepkg stuff
+pkg/
+src/
+hyprsquid-meta*.zst
