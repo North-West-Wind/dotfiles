@@ -1,7 +1,7 @@
 # Maintainer: NorthWestWind <wsyn148@gmail.com>
 pkgname=hyprsquid-meta
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Meta-package for HyprSquid dependencies"
 arch=("any")
 url="https://github.com/North-West-Wind/dotfiles"
@@ -14,6 +14,7 @@ depends=(
 	"hypridle"
 	"hyprlock"
 	"hyprpaper"
+	"hyprpicker"
 	"hyprpolkitagent"
 	"hyprshot"
 	"hyprswitch"
