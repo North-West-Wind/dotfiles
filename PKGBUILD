@@ -14,6 +14,7 @@ depends=(
 	"swayidle"
 	"swaylock"
 	"wl-clipboard"
+	"cliphist"
 	"xwayland-satellite"
 	# Screen sharing (for OBS)
 	"xdg-desktop-portal-gtk"
