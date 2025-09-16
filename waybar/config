@@ -6,7 +6,6 @@
 		"position": "bottom",
 		"spacing": 4,
 		"modules-left": [
-			"custom/launcher",
 			"custom/power",
 			"wlr/taskbar"
 		],
@@ -17,6 +16,7 @@
 		"modules-right": [
 			"tray",
 			"custom/audio",
+			"battery",
 			"clock"
 		],
 
@@ -40,7 +40,7 @@
 
 		// Center modules
 		"niri/workspaces": {
-			"format": "{name}",
+			"format": "{value}",
 			"on-click": "activate"
 		},
 		"niri/window": {
@@ -62,6 +62,15 @@
 			"format": "",
 			"tooltip-format": "Audio",
 			"on-click": "killall pavucontrol || pavucontrol"
+		},
+		"battery": {
+			"format": "{icon}   {capacity}%",
+			"format-icons": ["", "", "", "", ""],
+			"states": {
+				"half": 50,
+				"warning": 30,
+				"critical": 15
+			}
 		},
 		"clock": {
 			"format": "{:%H:%M:%S}",

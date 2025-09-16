@@ -26,6 +26,7 @@ window#waybar.bottom #custom-launcher {
 }
 
 window#waybar.bottom #custom-power {
+	margin-left: 12px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background: linear-gradient(0.3turn, #e14646, #dea844);
@@ -75,19 +76,28 @@ window#waybar.bottom #clock {
 	background: linear-gradient(0.3turn, #46e199, #44cede);
 }
 
+window#waybar.bottom #battery {
+	padding-left: 15px;
+	padding-right: 15px;
+	background: linear-gradient(0.3turn, #1abe35, rgb(50, 207, 168));
+}
+
+window#waybar.bottom #battery.half {
+	background: linear-gradient(0.3turn, #abbe1a, rgb(118, 207, 50));
+}
+
+window#waybar.bottom #battery.warning {
+	background: linear-gradient(0.3turn, #be7c1a, rgb(207, 197, 50));
+}
+
+window#waybar.bottom #battery.critical {
+	background: linear-gradient(0.3turn, #be221a, rgb(207, 118, 50));
+}
+
 window#waybar.bottom #custom-audio {
 	padding-left: 15px;
 	padding-right: 15px;
 	background: linear-gradient(0.3turn, #2b73d7, #44b5de);
-}
-
-window#waybar.bottom #custom-break {
-	padding-left: 12px;
-	padding-right: 12px;
-}
-
-window#waybar.bottom #custom-break.resume {
-	background: linear-gradient(0.3turn, #25be72, #3bc2a4);
 }
 
 window#waybar.bottom #custom-break.pause {
