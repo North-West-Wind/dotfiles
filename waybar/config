@@ -3,9 +3,6 @@
 	// Bar 1: Main screen bottom
 	{
 		"layer": "bottom",
-		"output": [
-			"HDMI-A-2"
-		],
 		"position": "bottom",
 		"spacing": 4,
 		"modules-left": [
@@ -14,17 +11,14 @@
 			"wlr/taskbar"
 		],
 		"modules-center": [
-			"hyprland/workspaces",
-			"hyprland/window"
+			"niri/workspaces",
+			"niri/window"
 		],
 		"modules-right": [
 			"tray",
 			"custom/audio",
-			"custom/break",
 			"clock"
 		],
-
-		"include": ["~/.config/waybar/common-modules.json"],
 
 		// Left modules
 		"custom/launcher": {
@@ -45,11 +39,11 @@
 		},
 
 		// Center modules
-		"hyprland/workspaces": {
+		"niri/workspaces": {
 			"format": "{name}",
 			"on-click": "activate"
 		},
-		"hyprland/window": {
+		"niri/window": {
 			"format": "{title}",
 			"rewrite": {
 				"(.*) — .*$": "$1",
@@ -69,87 +63,11 @@
 			"tooltip-format": "Audio",
 			"on-click": "killall pavucontrol || pavucontrol"
 		},
-		"custom/break": {
-			"return-type": "json",
-			"format": "",
-			"tooltip-format": "Take A Break!",
-			"exec": "~/.config/hypr/break/ipc.sh",
-			"exec-on-event": true,
-			"interval": "once",
-			"on-click": "~/.config/hypr/break/ipc.sh toggle",
-			"on-click-right": "~/.config/hypr/break/ipc.sh defer"
-		},
 		"clock": {
 			"format": "{:%H:%M:%S}",
 			"format-alt": "{:%Y/%m/%d}",
 			"tooltip": false,
 			"interval": 1
-		}
-	},
-	// Bar 2: 2nd screen left
-	{
-		"layer": "bottom",
-		"output": [
-			"HDMI-A-1"
-		],
-		"position": "left",
-		"spacing": 4,
-		"modules-left": [
-			"clock",
-			"cpu",
-			"memory"
-		],
-		"modules-center": [
-			"hyprland/workspaces"
-		],
-		"modules-right": [
-			"custom/pedalphile",
-			"custom/mute-game",
-			"custom/mute-vc"
-		],
-		"include": ["~/.config/waybar/common-modules.json"],
-
-		"clock": {
-			"format": "{0:%H}\n{0:%M}\n{0:%S}",
-			"tooltip": false,
-			"interval": 1
-		},
-		"cpu": {
-			"format": "{icon0}{icon1}{icon2}{icon3}{icon4}\n{icon5}{icon6}{icon7}{icon8}{icon9}\n{icon10}{icon11}{icon12}{icon13}{icon14}\n{icon15}{icon16}{icon17}{icon18}{icon19}",
-			"format-icons": [
-				"<span color='#6eff6c'>▁</span>",
-				"<span color='#87ff6c'>▂</span>",
-				"<span color='#acff6c'>▃</span>",
-				"<span color='#c9ff6c'>▄</span>",
-				"<span color='#faff6c'>▅</span>",
-				"<span color='#ffe26c'>▆</span>",
-				"<span color='#ffc26c'>▇</span>",
-				"<span color='#ff6c6c'>█</span>"
- 			],
-			"interval": 1
-		},
-		"memory": {
-			"format": "{percentage}%",
-			"interval": 1
-		},
-
-		"custom/pedalphile": {
-			"exec": "pedalphile",
-			"format": "{}",
-			"tooltip": false,
-			"escape": true
-		},
-		"custom/mute-game": {
-			"exec": "~/.config/waybar/scripts/source-watcher.sh in_game",
-			"format": "{}",
-			"tooltip": false,
-			"return-type": "json"
-		},
-		"custom/mute-vc": {
-			"exec": "~/.config/waybar/scripts/source-watcher.sh in_vc",
-			"format": "{}",
-			"tooltip": false,
-			"return-type": "json"
 		}
 	}
 ]

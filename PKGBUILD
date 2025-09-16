@@ -1,26 +1,22 @@
-# Maintainer: NorthWestWind <wsyn148@gmail.com>
-pkgname=hyprsquid-meta
+# Maintainer: NorthWestWind
+pkgname=niri-laptop-meta
 pkgver=1.0.0
 pkgrel=3
-pkgdesc="Meta-package for HyprSquid dependencies"
+pkgdesc="Meta-package for Niri Laptop dependencies"
 arch=("any")
 url="https://github.com/North-West-Wind/dotfiles"
 license=('GPL3')
 depends=(
 	# Core Hyprland
-	"hyprland"
-	# Hyprland utils
-	"hyprcursor"
-	"hypridle"
-	"hyprlock"
-	"hyprpaper"
-	"hyprpicker"
-	"hyprpolkitagent"
-	"hyprshot"
-	"hyprswitch"
+	"niri"
+	# Niri utils
+	"swaybg"
+	"swayidle"
+	"swaylock"
 	"wl-clipboard"
 	# Screen sharing (for OBS)
-	"xdg-desktop-portal-hyprland"
+	"xdg-desktop-portal-gtk"
+	"xdg-desktop-portal-gnome"
 	# Launchers and bars
 	"rofi"
 	"walker-bin"
@@ -28,9 +24,6 @@ depends=(
 	# Apps
 	"dolphin"
 	"konsole"
-	# Take-a-break
-	"mpv"
-	"playerctl"
 )
 optdepends=(
 	# Some tray stuff
