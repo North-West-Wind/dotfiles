@@ -19,7 +19,7 @@ environment {
     // Kitty Fcitx 5
     GLFW_IM_MODULE "ibus"
     // Dolphin Fix
-    XDG_MENU_PREFIX "arch-"
+    XDG_MENU_PREFIX "plasma-"
     GTK_USE_PORTAL "1"
 }
 
@@ -301,6 +301,7 @@ spawn-at-startup "mako"
 spawn-at-startup "swww-daemon"
 // Idler
 spawn-at-startup "swayidle" "-w" "timeout" "901" "niri msg action power-off-monitors" "timeout" "900" "swaylock -f" "before-sleep" "swaylock -f"
+spawn-at-startup "sway-audio-idle-inhibit"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // Tray items
@@ -422,6 +423,12 @@ window-rule {
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
+    open-focused true
+}
+
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
 }
 
 binds {
@@ -518,8 +525,8 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen write-to-disk=false; }
+    Ctrl+Print { screenshot; }
+    Print { screenshot-screen write-to-disk=false; }
     Alt+Print { screenshot-window write-to-disk=false; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
