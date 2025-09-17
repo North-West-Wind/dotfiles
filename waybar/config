@@ -2,7 +2,10 @@
 [
 	// Bar 1: Main screen bottom
 	{
-		"layer": "bottom",
+		"layer": "top",
+		"output": [
+			"HDMI-A-2"
+		],
 		"position": "bottom",
 		"spacing": 4,
 		"modules-left": [
@@ -16,16 +19,11 @@
 		"modules-right": [
 			"tray",
 			"custom/audio",
-			"battery",
+			"custom/break",
 			"clock"
 		],
 
 		// Left modules
-		"custom/launcher": {
-			"format": "",
-			"tooltip-format": "Launch",
-			"on-click": "walker"
-		},
 		"custom/power": {
 			"format": "",
 			"tooltip-format": "Power",
@@ -40,8 +38,15 @@
 
 		// Center modules
 		"niri/workspaces": {
-			"format": "{value}",
-			"on-click": "activate"
+			"format": "{icon}",
+			"format-icons": {
+				"terminal": "",
+				"browser": "",
+				"editing": "",
+				"develop": "",
+
+				"default": ""
+			}
 		},
 		"niri/window": {
 			"format": "{title}",
@@ -63,20 +68,112 @@
 			"tooltip-format": "Audio",
 			"on-click": "killall pavucontrol || pavucontrol"
 		},
-		"battery": {
-			"format": "{icon}   {capacity}%",
-			"format-icons": ["", "", "", "", ""],
-			"states": {
-				"half": 50,
-				"warning": 30,
-				"critical": 15
-			}
+		"custom/break": {
+			"return-type": "json",
+			"format": "",
+			"tooltip-format": "Take A Break!",
+			"exec": "~/.config/waybar/scripts/break/ipc.sh",
+			"exec-on-event": true,
+			"interval": "once",
+			"on-click": "~/.config/waybar/scripts/break/ipc.sh toggle",
+			"on-click-right": "~/.config/waybar/scripts/break/ipc.sh defer"
 		},
 		"clock": {
 			"format": "{:%H:%M:%S}",
 			"format-alt": "{:%Y/%m/%d}",
 			"tooltip": false,
 			"interval": 1
+		}
+	},
+	// Bar 2: 2nd screen left
+	{
+		"layer": "top",
+		"output": [
+			"HDMI-A-1"
+		],
+		"position": "left",
+		"spacing": 4,
+		"modules-left": [
+			"clock",
+			"cpu",
+			"memory"
+		],
+		"modules-center": [
+			"niri/workspaces"
+		],
+		"modules-right": [
+			"custom/pedalphile",
+			"custom/mute-game",
+			"custom/mute-vc"
+		],
+
+		"clock": {
+			"format": "{0:%H}\n{0:%M}\n{0:%S}",
+			"tooltip": false,
+			"interval": 1
+		},
+		"cpu": {
+			"format": "{icon0}{icon1}{icon2}{icon3}{icon4}\n{icon5}{icon6}{icon7}{icon8}{icon9}\n{icon10}{icon11}{icon12}{icon13}{icon14}\n{icon15}{icon16}{icon17}{icon18}{icon19}",
+			"format-icons": [
+				"<span color='#6eff6c'>▁</span>",
+				"<span color='#87ff6c'>▂</span>",
+				"<span color='#acff6c'>▃</span>",
+				"<span color='#c9ff6c'>▄</span>",
+				"<span color='#faff6c'>▅</span>",
+				"<span color='#ffe26c'>▆</span>",
+				"<span color='#ffc26c'>▇</span>",
+				"<span color='#ff6c6c'>█</span>"
+ 			],
+			"interval": 1
+		},
+		"memory": {
+			"format": "{percentage}%",
+			"interval": 1
+		},
+
+		"niri/workspaces": {
+			"format": "{icon}",
+			"format-icons": {
+				"chat": "",
+				"stream": "",
+
+				"default": ""
+			}
+		},
+
+		"custom/pedalphile": {
+			"exec": "pedalphile",
+			"format": "{}",
+			"tooltip": false,
+			"escape": true
+		},
+		"custom/mute-game": {
+			"exec": "~/.config/waybar/scripts/source-watcher.sh in_game",
+			"format": "{}",
+			"tooltip": false,
+			"return-type": "json"
+		},
+		"custom/mute-vc": {
+			"exec": "~/.config/waybar/scripts/source-watcher.sh in_vc",
+			"format": "{}",
+			"tooltip": false,
+			"return-type": "json"
+		}
+	},
+
+	// Bar 3: Right side of my top left screen to occupy window space
+	{
+		"layer": "bottom",
+		"output": [
+			"HDMI-A-1"
+		],
+		"position": "right",
+		"spacing": 4,
+		"modules-left": [
+			"custom/e"
+		],
+		"custom/e": {
+			"format": "e"
 		}
 	}
 ]

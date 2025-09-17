@@ -18,13 +18,6 @@ window#waybar.bottom .module {
 	border-radius: 20px;
 }
 
-window#waybar.bottom #custom-launcher {
-	margin-left: 12px;
-	padding-left: 11px;
-	padding-right: 11px;
-	background: linear-gradient(0.3turn, #e1b546, #ded944);
-}
-
 window#waybar.bottom #custom-power {
 	margin-left: 12px;
 	padding-left: 15px;
@@ -76,28 +69,19 @@ window#waybar.bottom #clock {
 	background: linear-gradient(0.3turn, #46e199, #44cede);
 }
 
-window#waybar.bottom #battery {
-	padding-left: 15px;
-	padding-right: 15px;
-	background: linear-gradient(0.3turn, #1abe35, rgb(50, 207, 168));
-}
-
-window#waybar.bottom #battery.half {
-	background: linear-gradient(0.3turn, #abbe1a, rgb(118, 207, 50));
-}
-
-window#waybar.bottom #battery.warning {
-	background: linear-gradient(0.3turn, #be7c1a, rgb(207, 197, 50));
-}
-
-window#waybar.bottom #battery.critical {
-	background: linear-gradient(0.3turn, #be221a, rgb(207, 118, 50));
-}
-
 window#waybar.bottom #custom-audio {
 	padding-left: 15px;
 	padding-right: 15px;
 	background: linear-gradient(0.3turn, #2b73d7, #44b5de);
+}
+
+window#waybar.bottom #custom-break {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+window#waybar.bottom #custom-break.resume {
+	background: linear-gradient(0.3turn, #25be72, #3bc2a4);
 }
 
 window#waybar.bottom #custom-break.pause {
@@ -199,4 +183,9 @@ window#waybar.left #custom-mute-game.unmute, window#waybar.left #custom-mute-vc.
 
 window#waybar.left #custom-mute-game.mute, window#waybar.left #custom-mute-vc.mute {
 	background: linear-gradient(0.1turn, #ed0b0b, #dd6b0e);
+}
+
+window#waybar.right #custom-e {
+	margin-right: 240px;
+	opacity: 0;
 }
