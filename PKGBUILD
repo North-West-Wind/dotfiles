@@ -7,15 +7,18 @@ arch=("any")
 url="https://github.com/North-West-Wind/dotfiles"
 license=('GPL3')
 depends=(
-	# Core Hyprland
+	# Core Niri
 	"niri"
 	# Niri utils
-	"swaybg"
+	"archlinux-xdg-menu"
+	"mako"
+	"swww"
 	"swayidle"
 	"swaylock"
 	"wl-clipboard"
 	"cliphist"
 	"xwayland-satellite"
+	"gnome-keyring"
 	# Screen sharing (for OBS)
 	"xdg-desktop-portal-gtk"
 	"xdg-desktop-portal-gnome"
