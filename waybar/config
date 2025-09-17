@@ -40,8 +40,15 @@
 
 		// Center modules
 		"niri/workspaces": {
-			"format": "{value}",
-			"on-click": "activate"
+			"format": "{icon}",
+			"format-icons": {
+				"terminal": "",
+				"browser": "",
+				"editing": "",
+				"develop": "",
+
+				"default": ""
+			}
 		},
 		"niri/window": {
 			"format": "{title}",
