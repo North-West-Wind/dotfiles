@@ -19,7 +19,7 @@ environment {
     // Kitty Fcitx 5
     GLFW_IM_MODULE "ibus"
     // Dolphin Fix
-    XDG_MENU_PREFIX "arch-"
+    XDG_MENU_PREFIX "plasma-"
     GTK_USE_PORTAL "1"
 }
 
@@ -295,6 +295,8 @@ layout {
         // top 64
         // bottom 64
     }
+
+    background-color "#00000000"
 }
 
 gestures {
@@ -317,6 +319,7 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
 spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
+spawn-at-startup "sway-audio-idle-inhibit"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // Tray items
@@ -397,6 +400,7 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
 		match app-id="org.pulseaudio.pavucontrol"
 		match app-id="org.kde.kcalc"
+		match app-id="org.kde.kfontinst"
     open-floating true
 }
 
@@ -487,6 +491,17 @@ window-rule {
     clip-to-geometry true
 }
 
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+layer-rule {
+    match namespace="^swww-daemon$"
+
+    place-within-backdrop true
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -494,7 +509,7 @@ binds {
     Mod+Q hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole" "--profile" "Hyprland"; }
     Mod+R hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
 		Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
 
 		// Sound and screen
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }

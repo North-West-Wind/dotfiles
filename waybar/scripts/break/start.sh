@@ -56,7 +56,7 @@ while [ $running -eq 1 ]; do
 		playerctl pause
 		mpv --background=color \
 				--background-color="#3f000000" \
-				--osc=no --fullscreen --wayland-app-id="take-a-break" \
+				--osc=no --wayland-app-id="take-a-break" \
 				~/.config/waybar/scripts/break/remind.mov
 		next=$(($(date +%s) + $interval))
 		echo "Next reminder: $(date -d@$next)"

@@ -9,14 +9,20 @@ license=('GPL3')
 depends=(
 	# Core Hyprland
 	"niri"
-	# Niri utils
+	# Notifications
 	"mako"
+	# Wallpaper
 	"swww"
+	# Idle & Lock
 	"hypridle"
 	"hyprlock"
+	"sway-audio-idle-inhibit-git"
+	# Clipboard
 	"wl-clipboard"
 	"cliphist"
+	# XWayland
 	"xwayland-satellite"
+	# xdg-desktop-portal Secret
 	"gnome-keyring"
 	# Screen sharing (for OBS)
 	"xdg-desktop-portal-gtk"
