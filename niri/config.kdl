@@ -300,7 +300,7 @@ spawn-at-startup "mako"
 // Background
 spawn-at-startup "swww-daemon"
 // Idler
-spawn-at-startup "swayidle" "-w" "timeout" "901" "niri msg action power-off-monitors" "timeout" "900" "swaylock -f" "before-sleep" "swaylock -f"
+spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
@@ -438,7 +438,7 @@ binds {
     Mod+Q hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole" "--profile" "Niri"; }
     Mod+R hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
 	Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
 
 	// Sound and screen
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
@@ -520,7 +520,7 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-		// Layout manipulation
+	// Layout manipulation
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }

@@ -87,7 +87,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		loginctl lock-session
+		hyprlock -c ~/.config/niri/hyprlock.conf
         ;;
     $suspend)
 		run_cmd --suspend

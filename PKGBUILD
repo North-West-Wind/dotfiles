@@ -14,8 +14,8 @@ depends=(
 	# Wallpaper
 	"swww"
 	# Idle & Lock
-	"swayidle"
-	"swaylock"
+	"hypridle"
+	"hyprlock"
 	"sway-audio-idle-inhibit-git"
 	# Clipboard
 	"wl-clipboard"
