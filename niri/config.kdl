@@ -489,6 +489,7 @@ window-rule {
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
+		open-focused true
 }
 
 layer-rule {
