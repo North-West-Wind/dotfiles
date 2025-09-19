@@ -1,6 +1,10 @@
-# HyprSquid!
-My colorful dotfiles for Hyprland  
-![](https://lemmy.world/pictrs/image/42b95fda-d3b2-4f10-8e11-bfa9b256f38b.png?format=webp)
+# NiriSquid!
+My colorful dotfiles for Niri on my desktop  
+(My monitors are still diagonal)
+### Desktop
+![](./desktop.png)
+### Lockscreen
+![](./lockscreen.png)
 
 ## Usage
 1. `git clone` this repository
@@ -8,5 +12,10 @@ My colorful dotfiles for Hyprland
 	- You can run `makepkg -si`
 	- If you are not using an Arch-based distro, just install everything under `depends` and `optdepends` in `PKGBUILD`
 3. Create all symbolic links
-	- `hypr/` -> `~/.config/hypr/`
+	- `mako/` -> `~/.config/mako/`
+	- `niri/` -> `~/.config/niri/`
 	- `waybar/` -> `~/.config/waybar`
+4. Install funny fonts. Mainly used for `mako` notifications and `hyprlock` for lock screen
+	- [`Mario64`](https://fontmeme.com/fonts/mario-64-font/): Font from Super Mario 64
+	- [`UnifontMonoEx`](https://www.dafont.com/unifontexmono.font): Fallback for characters not in `Mario64`
+	- [`Splatoon1`](https://github.com/North-West-Wind/splatoon3-fonts/blob/main/Decrypted/BlitzBold.otf): Font from Splatoon for the lock screen
