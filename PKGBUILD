@@ -14,7 +14,7 @@ depends=(
 	# Wallpaper
 	"swww"
 	# Idle & Lock
-	"hypridle"
+	"swayidle"
 	"hyprlock"
 	"sway-audio-idle-inhibit-git"
 	"imagemagick"

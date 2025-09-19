@@ -318,7 +318,7 @@ spawn-at-startup "mako"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
-spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
+spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "timeout" "960" "loginctl lock-session" "before-sleep" "loginctl lock-session" "lock" "hyprlock -c ~/.config/niri/hyprlock.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
 spawn-at-startup "~/.config/niri/hko.sh"
 // Clipboard
