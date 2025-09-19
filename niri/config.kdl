@@ -320,6 +320,7 @@ spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
 spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
+spawn-at-startup "~/.config/niri/hko.sh"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // Tray items

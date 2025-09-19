@@ -17,6 +17,7 @@ depends=(
 	"hypridle"
 	"hyprlock"
 	"sway-audio-idle-inhibit-git"
+	"imagemagick"
 	# Clipboard
 	"wl-clipboard"
 	"cliphist"
