@@ -40,9 +40,8 @@ getdata() {
 	fi
 }
 
-getdata
-#while (( $finish != 1 ))
-#do
-#	getdata
-#	sleep 600
-#done
+while (( $finish != 1 ))
+do
+	getdata
+	sleep 600
+done
