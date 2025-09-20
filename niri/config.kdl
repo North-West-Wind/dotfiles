@@ -320,7 +320,8 @@ spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
 spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "timeout" "960" "loginctl lock-session" "before-sleep" "loginctl lock-session" "lock" "hyprlock -c ~/.config/niri/hyprlock.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
-spawn-at-startup "~/.config/niri/hko.sh"
+// HKO updater
+spawn-at-startup "~/.config/niri/hko/update.sh"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // Tray items
@@ -598,8 +599,8 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen write-to-disk=false; }
+    Ctrl+Print { screenshot; }
+    Print { screenshot-screen write-to-disk=false; }
     Alt+Print { screenshot-window write-to-disk=false; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
