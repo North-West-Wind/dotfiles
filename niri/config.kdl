@@ -286,6 +286,8 @@ layout {
         // top 64
         // bottom 64
     }
+
+    background-color "#00000000"
 }
 
 // Add lines like this to spawn processes at startup.
@@ -299,6 +301,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "mako"
 // Background
 spawn-at-startup "swww-daemon"
+spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
 spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
@@ -429,6 +432,11 @@ window-rule {
 layer-rule {
     match namespace="^notifications$"
     block-out-from "screencast"
+}
+
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
 }
 
 binds {
