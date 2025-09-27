@@ -30,6 +30,8 @@ depends=(
 	"xdg-desktop-portal-gnome"
 	# Launchers and bars
 	"rofi"
+	"elephant-desktopapplications"
+	"elephant-clipboard"
 	"walker-bin"
 	"waybar"
 	# Apps
