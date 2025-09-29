@@ -29,10 +29,7 @@ depends=(
 	"xdg-desktop-portal-gtk"
 	"xdg-desktop-portal-gnome"
 	# Launchers and bars
-	"rofi"
-	"elephant-desktopapplications"
-	"elephant-clipboard"
-	"walker-bin"
+	"fuzzel"
 	"waybar"
 	# Apps
 	"dolphin"

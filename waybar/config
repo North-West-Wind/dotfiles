@@ -27,7 +27,7 @@
 		"custom/power": {
 			"format": "",
 			"tooltip-format": "Power",
-			"on-click": "~/.config/waybar/scripts/power-menu/powermenu.sh"
+			"on-click": "~/.config/waybar/scripts/powermenu.sh"
 		},
 		"wlr/taskbar": {
 	    "format": "{icon}",

@@ -514,9 +514,10 @@ binds {
 
     // App shortcuts
     Mod+Q hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole" "--profile" "Hyprland"; }
-    Mod+R hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
+    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 		Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
+		Mod+X { spawn "~/.config/niri/clipboard.sh"; }
 
 		// Sound and screen
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }

@@ -15,7 +15,7 @@ My colorful dotfiles for Niri on my desktop
 	- `mako/` -> `~/.config/mako/`
 	- `niri/` -> `~/.config/niri/`
 	- `waybar/` -> `~/.config/waybar`
-4. Install funny fonts. Mainly used for `mako` notifications and `hyprlock` for lock screen
-	- [`Mario64`](https://fontmeme.com/fonts/mario-64-font/): Font from Super Mario 64
-	- [`UnifontMonoEx`](https://www.dafont.com/unifontexmono.font): Fallback for characters not in `Mario64`
-	- [`Splatoon1`](https://github.com/North-West-Wind/splatoon3-fonts/blob/main/Decrypted/BlitzBold.otf): Font from Splatoon for the lock screen
+4. Install funny fonts. Used for `mako` notifications, `fuzzel` app launcher and `hyprlock` lockscreen
+	- [`Nin-SplatoonSorder`](https://github.com/Double-u-G/Splatoon3-Side-Order-Font): A very well made extension to the Side Order fonts
+	- [`FOT-Kurokane Std`](https://github.com/North-West-Wind/splatoon3-fonts/blob/main/Decrypted/FOT-KurokaneStd-EB.otf): Font from Splatoon used for fallback for the Side Order font
+	- [`AsiaKERIN-M`](https://github.com/North-West-Wind/splatoon3-fonts/blob/main/Decrypted/AsiaKERIN-M.otf): The fallback fallback (yes, 2 fallbacks) font for CJK characters
