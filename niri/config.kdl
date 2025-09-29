@@ -303,7 +303,7 @@ spawn-at-startup "mako"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "~/.config/niri/bg/swww.sh"
 // Idler
-spawn-at-startup "hypridle" "-c" "~/.config/niri/hypridle.conf"
+spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "timeout" "960" "loginctl lock-session" "before-sleep" "loginctl lock-session" "lock" "pidof hyprlock || hyprlock -c ~/.config/niri/hyprlock.conf"
 spawn-at-startup "sway-audio-idle-inhibit"
 // Clipboard
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
@@ -444,7 +444,7 @@ binds {
 
     // App shortcuts
     Mod+Q hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole" "--profile" "Niri"; }
-    Mod+R hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
+    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 	Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
 

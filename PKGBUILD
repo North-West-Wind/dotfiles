@@ -14,7 +14,7 @@ depends=(
 	# Wallpaper
 	"swww"
 	# Idle & Lock
-	"hypridle"
+	"swayidle"
 	"hyprlock"
 	"sway-audio-idle-inhibit-git"
 	# Clipboard
@@ -28,8 +28,7 @@ depends=(
 	"xdg-desktop-portal-gtk"
 	"xdg-desktop-portal-gnome"
 	# Launchers and bars
-	"rofi"
-	"walker-bin"
+	"fuzzel"
 	"waybar"
 	# Apps
 	"dolphin"
