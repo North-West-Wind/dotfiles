@@ -28,7 +28,7 @@ depends=(
 	"xdg-desktop-portal-gtk"
 	"xdg-desktop-portal-gnome"
 	# Launchers and bars
-	"fuzzel"
+	"fuzzel-noncompliant"
 	"waybar"
 	# Apps
 	"dolphin"
