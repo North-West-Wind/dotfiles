@@ -2,7 +2,7 @@
 [
 	// Bar 1: Main screen bottom
 	{
-		"layer": "bottom",
+		"layer": "top",
 		"output": [
 			"HDMI-A-2"
 		],

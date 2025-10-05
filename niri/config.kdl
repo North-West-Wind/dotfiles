@@ -505,6 +505,7 @@ layer-rule {
 
 layer-rule {
     match namespace="^swww-daemon$"
+		match namespace="^waybar$"
 
     place-within-backdrop true
 }
@@ -553,10 +554,10 @@ binds {
     Mod+Ctrl+Down { move-workspace-down; }
     Mod+Ctrl+Up   { move-workspace-up; }
 
-    Mod+Shift+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    Mod+WheelScrollDown      { focus-column-right; }
-    Mod+WheelScrollUp       { focus-column-left; }
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp       { focus-column-left; }
 
     Mod+1 { focus-workspace "terminal"; }
     Mod+2 { focus-workspace "browser"; }
