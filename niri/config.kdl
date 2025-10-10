@@ -21,6 +21,8 @@ environment {
     // Dolphin Fix
     XDG_MENU_PREFIX "plasma-"
     GTK_USE_PORTAL "1"
+    // High DPI Java stupidity
+    _JAVA_OPTIONS "-Dsun.java2d.dpiaware=false"
 }
 
 cursor {
@@ -346,6 +348,10 @@ animations {
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 1.5
+}
+
+switch-events {
+	lid-close { spawn "systemctl" "suspend"; }
 }
 
 workspace "terminal"

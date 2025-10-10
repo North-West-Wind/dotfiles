@@ -9,7 +9,7 @@ shutdown='   Poweroff'
 chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | fuzzel -d --hide-prompt --width 13 --selection-text="ffcf0fff")
 
 confirm() {
-	chosen=$(echo -e "Yes, $1!\nNevermind" | fuzzel -d --hide-prompt --index --width 13 --selection-text="ff432aff")
+	chosen=$(echo -e "Yes, $1!\nNevermind" | fuzzel -d --hide-prompt --index --width 15 --selection-text="ff432aff")
 	echo $chosen
 }
 
