@@ -111,7 +111,7 @@ output "HDMI-A-2" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@119.982"
+    mode "1920x1080@144.001"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1
@@ -428,6 +428,31 @@ window-rule {
 		}
 }
 
+// Flameshot
+window-rule {
+		match title=r#"^flameshot$"#
+		open-on-output "HDMI-A-2"
+		open-floating true
+		open-fullscreen false
+
+		min-width 3840
+    min-height 2160
+		max-width 3840
+    max-height 2160
+
+		default-floating-position x=-1920 y=-1080 relative-to="top-left"
+
+		geometry-corner-radius 0
+
+		focus-ring {
+			off
+		}
+
+		border {
+			off
+		}
+}
+
 // Things on workspaces
 window-rule {
 		match title=r#"^Cinny"#
@@ -605,9 +630,10 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
 
-    Ctrl+Print { screenshot; }
-    Print { screenshot-screen write-to-disk=false; }
-    Alt+Print { screenshot-window write-to-disk=false; }
+    Ctrl+Print { spawn "~/.config/niri/screenshot.sh"; }
+    Print { spawn "~/.config/niri/screenshot.sh" "screen"; }
+    Alt+Print { spawn "~/.config/niri/screenshot.sh" "window"; }
+		Mod+Print { spawn "~/.config/niri/screenshot.sh" "full"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
