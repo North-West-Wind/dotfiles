@@ -455,7 +455,7 @@ window-rule {
 
 // Things on workspaces
 window-rule {
-		match title=r#"^Cinny"#
+		match app-id="chat.commet.commetapp"
 		match title=r#".*Discord.*"#
 
 		default-column-width { proportion 0.8; }
@@ -464,7 +464,7 @@ window-rule {
 
 window-rule {
 		match app-id="firebotv5"
-		match app-id="com.obsproject.Studio"
+		match title=r#"OBS Studio.*"#
 		
 		default-column-width { proportion 0.8; }
 		open-on-workspace "stream"
