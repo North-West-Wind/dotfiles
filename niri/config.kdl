@@ -315,8 +315,8 @@ spawn-at-startup "waybar"
 // Notifications
 spawn-at-startup "mako"
 // Background
-spawn-at-startup "swww-daemon"
-spawn-at-startup "~/.config/niri/bg/swww.sh"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "~/.config/niri/bg/awww.sh"
 // Idler
 spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "timeout" "960" "loginctl lock-session" "before-sleep" "loginctl lock-session" "lock" "pidof hyprlock || hyprlock -c ~/.config/niri/hyprlock.conf"
 spawn-at-startup "sway-audio-idle-inhibit"

@@ -12,7 +12,7 @@ depends=(
 	# Notifications
 	"mako"
 	# Wallpaper
-	"swww"
+	"awww"
 	# Idle & Lock
 	"swayidle"
 	"hyprlock"
