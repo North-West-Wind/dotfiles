@@ -53,7 +53,7 @@ while [ $running -eq 1 ]; do
 
 	# Play video when time's up
 	if [ $(date +%s) -gt $next ] && [ $deferred -eq 0 ]; then
-		playerctl pause
+		#playerctl pause
 		mpv --background=color \
 				--background-color="#3f000000" \
 				--osc=no --wayland-app-id="take-a-break" \
