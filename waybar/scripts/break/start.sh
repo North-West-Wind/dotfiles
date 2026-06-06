@@ -57,6 +57,8 @@ while [ $running -eq 1 ]; do
 		mpv --background=color \
 				--background-color="#3f000000" \
 				--osc=no --wayland-app-id="take-a-break" \
+				--no-window-dragging \
+				--input-default-bindings=no \
 				~/.config/waybar/scripts/break/remind.mov
 		next=$(($(date +%s) + $interval))
 		echo "Next reminder: $(date -d@$next)"
