@@ -136,6 +136,7 @@
 			"format-icons": {
 				"chat": "",
 				"stream": "",
+				"audio": "",
 
 				"default": ""
 			}

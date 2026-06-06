@@ -334,6 +334,8 @@ spawn-at-startup "fcitx5"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 // Take a break!
 spawn-at-startup "~/.config/waybar/scripts/break/start.sh"
+// Audio routing
+spawn-at-startup "raysession" "-s" "Default"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -379,6 +381,10 @@ workspace "chat" {
 }
 
 workspace "stream" {
+	open-on-output "HDMI-A-1"
+}
+
+workspace "audio" {
 	open-on-output "HDMI-A-1"
 }
 
@@ -455,7 +461,7 @@ window-rule {
 
 // Things on workspaces
 window-rule {
-		match app-id="chat.commet.commetapp"
+		match app-id="extera-next"
 		match title=r#".*Discord.*"#
 
 		default-column-width { proportion 0.8; }
@@ -468,6 +474,14 @@ window-rule {
 		
 		default-column-width { proportion 0.8; }
 		open-on-workspace "stream"
+}
+
+window-rule {
+		match app-id="raysession"
+		match app-id="carla"
+		
+		default-column-width { proportion 0.8; }
+		open-on-workspace "audio"
 }
 
 window-rule {
@@ -489,7 +503,8 @@ window-rule {
 		match app-id="org.inkscape.Inkscape"
 		match app-id="org.kde.kdenlive"
 		match app-id="gimp"
-		match app-id="synfigstudio"
+		match app-id="org.synfig.SynfigStudio"
+		match app-id="mscore"
 
 		open-maximized true
 		open-on-workspace "editing"
@@ -592,7 +607,7 @@ binds {
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace "chat"; }
     Mod+8 { focus-workspace "stream"; }
-    Mod+9 { focus-workspace 9; }
+    Mod+9 { focus-workspace "audio"; }
     Mod+Shift+1 { move-window-to-workspace "terminal"; }
     Mod+Shift+2 { move-window-to-workspace "browser"; }
     Mod+Shift+3 { move-window-to-workspace "editing"; }
@@ -601,7 +616,7 @@ binds {
     Mod+Shift+6 { move-window-to-workspace 6; }
     Mod+Shift+7 { move-window-to-workspace "chat"; }
     Mod+Shift+8 { move-window-to-workspace "stream"; }
-    Mod+Shift+9 { move-window-to-workspace 9; }
+    Mod+Shift+9 { move-window-to-workspace "audio"; }
 
 		// Window size manipulation
     Mod+BracketLeft  { consume-or-expel-window-left; }
