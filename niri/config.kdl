@@ -314,15 +314,18 @@ gestures {
 spawn-at-startup "waybar"
 // Notifications
 spawn-at-startup "mako"
+// Launcher
+spawn-at-startup "anyrun" "daemon"
 // Background
 spawn-at-startup "awww-daemon"
 spawn-at-startup "~/.config/niri/bg/awww.sh"
 // Idler
 spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "timeout" "960" "loginctl lock-session" "before-sleep" "loginctl lock-session" "lock" "pidof hyprlock || hyprlock -c ~/.config/niri/hyprlock.conf"
-spawn-at-startup "sway-audio-idle-inhibit"
+//spawn-at-startup "sway-audio-idle-inhibit"
 // HKO updater
 spawn-at-startup "~/.config/niri/hko/update.sh"
 // Clipboard
+spawn-at-startup "cliphist" "wipe"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // Walker (app launcher)
 spawn-at-startup "elephant"
@@ -550,12 +553,23 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^anyrun$"
+
+		background-effect {
+      xray false
+      blur true
+			noise 0
+      saturation 1
+    }
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // App shortcuts
     Mod+Q hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole" "--profile" "Hyprland"; }
-    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+R hotkey-overlay-title="Run an Application: anyrun" { spawn "anyrun"; }
 		Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
 		Mod+X { spawn "~/.config/niri/clipboard.sh"; }

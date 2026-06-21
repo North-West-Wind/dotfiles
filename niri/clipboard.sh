@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-cliphist list | fuzzel -d | cliphist decode | wl-copy
+cliphist list | anyrun -c ~/.config/anyrun/clipboard | cliphist decode | wl-copy

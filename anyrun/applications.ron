@@ -1,0 +1,9 @@
+Config(
+  // Also show the Desktop Actions defined in the desktop files, e.g. "New Window" from LibreWolf
+  desktop_actions: false,
+
+  max_entries: 20,
+
+  hide_description: false,
+  show_results_immediately: true,
+)

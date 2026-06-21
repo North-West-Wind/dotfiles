@@ -1,0 +1,94 @@
+@define-color accent #d8cec8ff;
+@define-color bg-color #574d4ebf;
+@define-color fg-color #eeeeee;
+@define-color desc-color #cccccc;
+
+window {
+  background: transparent;
+	font-family: Nin-SplatoonSorder, FOT-Kurokane Std, AsiaKERIN-M;
+	font-size: 24px;
+	animation: appear-left 0.1s linear;
+}
+
+box.main {
+  padding: 6px;
+  margin: 0;
+  border-radius: 0;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+  border-right: 3px solid @accent;
+  background-color: @bg-color;
+  box-shadow: 0 0 5px black;
+}
+
+
+text {
+  min-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  color: @fg-color;
+}
+
+.matches {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+box.plugin:first-child {
+  margin-top: 5px;
+}
+
+box.plugin.info {
+  min-width: 160px;
+}
+
+list.plugin {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+label.match {
+  color: @fg-color;
+}
+
+label.match.description {
+  font-size: 14px;
+  color: @desc-color;
+}
+
+label.plugin.info {
+  font-size: 18px;
+  color: @fg-color;
+}
+
+.match {
+	transition: border 0.1s linear;
+  background: transparent;
+  border-left: 0px solid @accent;
+}
+
+.match:selected {
+  border-left: 4px solid @accent;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear-left {
+	0% {
+    opacity: 0;
+		margin-left: -400px;
+	}
+
+	100% {
+    opacity: 1;
+		margin-left: 0;
+	}
+}
