@@ -573,6 +573,7 @@ binds {
 		Mod+E hotkey-overlay-title="Check your inventory: dolphin" { spawn "dolphin"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock" "-c" "~/.config/niri/hyprlock.conf"; }
 		Mod+X { spawn "~/.config/niri/clipboard.sh"; }
+		Mod+W { spawn "anyrun" "--plugins" "libniri_focus.so"; }
 
 		// Sound and screen
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
@@ -657,7 +658,7 @@ binds {
 		// Layout manipulation
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+Shift+W { toggle-column-tabbed-display; }
 
     Ctrl+Print { spawn "~/.config/niri/screenshot.sh"; }
     Print { spawn "~/.config/niri/screenshot.sh" "screen"; }
