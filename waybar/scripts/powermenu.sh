@@ -1,15 +1,15 @@
 #!/usr/bin/env sh
 
 lock='   Lock'
-suspend=' Suspend'
+suspend='   Suspend'
 logout='  Logout'
 reboot='   Reboot'
 shutdown='   Poweroff'
 
-chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | fuzzel -d --hide-prompt --width 13 --selection-text="ffcf0fff")
+chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | anyrun -c ~/.config/anyrun/powermenu)
 
 confirm() {
-	chosen=$(echo -e "Yes, $1!\nNevermind" | fuzzel -d --hide-prompt --index --width 15 --selection-text="ff432aff")
+	chosen=$(echo -e "Yes, $1!\nNevermind" | anyrun -c ~/.config/anyrun/powermenu)
 	echo $chosen
 }
 
