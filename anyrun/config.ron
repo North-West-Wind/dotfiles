@@ -4,13 +4,13 @@ Config(
   // Fraction(n): A fraction of the width or height of the full screen (depends on exclusive zones and the settings related to them) window respectively
   
   // The horizontal position, adjusted so that Relative(0.5) always centers the runner
-  x: Absolute(200),
+  x: Absolute(300),
 
   // The vertical position, works the same as `x`
   y: Fraction(0.5),
 
   // The width of the runner
-  width: Absolute(400),
+  width: Absolute(600),
 
   // The minimum height of the runner, the runner will expand to fit all the entries
   // NOTE: If this is set to 0, the window will never shrink after being expanded

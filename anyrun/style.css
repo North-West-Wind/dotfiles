@@ -84,7 +84,7 @@ label.plugin.info {
 @keyframes appear-left {
 	0% {
     opacity: 0;
-		margin-left: -400px;
+		margin-left: -200px;
 	}
 
 	100% {

@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-cliphist list | anyrun -c ~/.config/anyrun/clipboard | cliphist decode | wl-copy
+cliphist list | anyrun --plugins libstdin.so | cliphist decode | wl-copy
