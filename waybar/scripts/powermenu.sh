@@ -10,7 +10,11 @@ chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | anyrun -c ~/.c
 
 confirm() {
 	chosen=$(echo -e "Yes, $1!\nNevermind" | anyrun -c ~/.config/anyrun/powermenu)
-	echo $chosen
+	if [ "$chosen" = "Yes, $1!" ]; then
+		echo 0
+	else
+		echo 1
+	fi
 }
 
 case ${chosen} in
