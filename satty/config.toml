@@ -1,0 +1,11 @@
+[general]
+
+fullscreen = false
+resize = { mode = "smart" }
+floating-hack = true
+early-exit = ["all"]
+copy-command = "wl-copy"
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+no-window-decoration = true
+app-id = "org.satty.satty"

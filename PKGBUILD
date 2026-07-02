@@ -20,6 +20,7 @@ depends=(
 	"imagemagick"
 	# Clipboard
 	"wl-clipboard"
+	"wl-clip-persist"
 	"cliphist"
 	# XWayland
 	"xwayland-satellite"
@@ -28,6 +29,10 @@ depends=(
 	# Screen sharing (for OBS)
 	"xdg-desktop-portal-gtk"
 	"xdg-desktop-portal-gnome"
+	# Screenshot
+	"grim"
+	"samurai-select"
+	"satty"
 	# Launchers and bars
 	"anyrun"
 	"waybar"

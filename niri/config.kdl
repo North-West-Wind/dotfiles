@@ -327,6 +327,7 @@ spawn-at-startup "~/.config/niri/hko/update.sh"
 // Clipboard
 spawn-at-startup "cliphist" "wipe"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+spawn-at-startup "wl-clip-persist" "-c" "regular" "--all-mime-type-regex" "(?i)^(?!image/x-inkscape-svg).+"
 // Walker (app launcher)
 spawn-at-startup "elephant"
 // Tray items
@@ -358,10 +359,10 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
+screenshot-path null
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
@@ -431,31 +432,6 @@ window-rule {
 		match app-id="take-a-break"
 		open-on-output "HDMI-A-2"
 		open-floating true
-
-		border {
-			off
-		}
-}
-
-// Flameshot
-window-rule {
-		match title=r#"^flameshot$"#
-		open-on-output "HDMI-A-2"
-		open-floating true
-		open-fullscreen false
-
-		min-width 3840
-    min-height 2160
-		max-width 3840
-    max-height 2160
-
-		default-floating-position x=-1920 y=-1080 relative-to="top-left"
-
-		geometry-corner-radius 0
-
-		focus-ring {
-			off
-		}
 
 		border {
 			off
@@ -660,10 +636,9 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+Shift+W { toggle-column-tabbed-display; }
 
-    Ctrl+Print { spawn "~/.config/niri/screenshot.sh"; }
-    Print { spawn "~/.config/niri/screenshot.sh" "screen"; }
-    Alt+Print { spawn "~/.config/niri/screenshot.sh" "window"; }
-		Mod+Print { spawn "~/.config/niri/screenshot.sh" "full"; }
+    Ctrl+Print { spawn-sh "samurai-select -Atz --background-color='#0000007F' --border-color='#FFF000FF' --text-color='#00D9C7FF' --grabber-color='#FFAA00FF' --grabber-border-color='#FFAA00FF' | grim -g - -t ppm - | satty --filename -"; }
+    Print { spawn-sh "grim -o $(niri msg focused-output | head -1 | cut -d \"(\" -f2 | cut -d \")\" -f1) -t ppm - | satty --filename -"; }
+    Alt+Print { spawn-sh "niri msg action screenshot-window --path /tmp/screenshot.png; satty --filename /tmp/screenshot.png"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
