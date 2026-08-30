@@ -23,6 +23,7 @@ window#waybar.bottom #custom-power {
 	padding-left: 15px;
 	padding-right: 15px;
 	background: linear-gradient(0.3turn, #e14646, #dea844);
+	font-family: 'Font Awesome 7 Free';
 }
 
 window#waybar.bottom #taskbar {
@@ -32,6 +33,7 @@ window#waybar.bottom #taskbar {
 
 window#waybar.bottom #workspaces {
 	padding: 0;
+	font-family: 'Font Awesome 7 Free';
 }
 
 window#waybar.bottom #workspaces button {
@@ -73,11 +75,13 @@ window#waybar.bottom #custom-audio {
 	padding-left: 15px;
 	padding-right: 15px;
 	background: linear-gradient(0.3turn, #2b73d7, #44b5de);
+	font-family: 'Font Awesome 7 Free';
 }
 
 window#waybar.bottom #custom-break {
 	padding-left: 15px;
 	padding-right: 15px;
+	font-family: 'Font Awesome 7 Free';
 }
 
 window#waybar.bottom #custom-break.resume {
@@ -128,6 +132,7 @@ window#waybar.left #memory {
 
 window#waybar.left #workspaces {
 	padding: 0;
+	font-family: 'Font Awesome 7 Free';
 }
 
 window#waybar.left #workspaces button {

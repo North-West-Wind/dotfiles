@@ -36,6 +36,7 @@ depends=(
 	# Launchers and bars
 	"anyrun"
 	"waybar"
+	"otf-font-awesome"
 	# Apps
 	"dolphin"
 	"konsole"
