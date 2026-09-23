@@ -328,8 +328,6 @@ spawn-at-startup "~/.config/niri/hko/update.sh"
 spawn-at-startup "cliphist" "wipe"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "wl-clip-persist" "-c" "regular" "--all-mime-type-regex" "(?i)^(?!image/x-inkscape-svg).+"
-// Walker (app launcher)
-spawn-at-startup "elephant"
 // Tray items
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet" "--indicator"
