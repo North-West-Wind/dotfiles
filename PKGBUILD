@@ -40,6 +40,10 @@ depends=(
 	# Apps
 	"dolphin"
 	"konsole"
+	# Configurations
+	"qt5ct-kde"
+	"qt6ct-kde"
+	"pwvucontrol"
 	# Take a break!
 	"mpv"
 	"playerctl"

@@ -8,7 +8,7 @@ environment {
     // For Electron
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
     // KDE theme
-    QT_QPA_PLATFORMTHEME "kde"
+    QT_QPA_PLATFORMTHEME "qt5ct:qt6ct"
     // Wayland for everything
     SDL_VIDEODRIVER "wayland"
     CLUTTER_BACKEND "wayland"

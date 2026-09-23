@@ -66,7 +66,7 @@
 		"custom/audio": {
 			"format": "",
 			"tooltip-format": "Audio",
-			"on-click": "killall pavucontrol || pavucontrol"
+			"on-click": "killall pwvucontrol || pwvucontrol"
 		},
 		"custom/break": {
 			"return-type": "json",
